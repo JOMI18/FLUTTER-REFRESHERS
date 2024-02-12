@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:practiceapp/FlutterVideosPractice/MoreScaffoldProperties.dart';
 import 'package:practiceapp/FlutterVideosPractice/MoreWidgetsAndProperties.dart';
-import 'package:practiceapp/PersonalPractice/AccessBankHomeScreen.dart';
-import 'package:practiceapp/PersonalPractice/BasicLayoutLesson.dart';
-import 'package:practiceapp/PersonalPractice/MyFormLayout.dart';
+import 'package:practiceapp/PersonalPractice/Apps%20Layout/AccessBankHomeScreen.dart';
+import 'package:practiceapp/PersonalPractice/Widgets%20Layout/BasicLayoutLesson.dart';
+import 'package:practiceapp/PersonalPractice/Apps%20Layout/DuolingProfile.dart';
+import 'package:practiceapp/PersonalPractice/Apps%20Layout/MyFormLayout.dart';
+import 'package:practiceapp/PersonalPractice/Widgets%20Layout/DatePicker.dart';
+import 'package:practiceapp/PersonalPractice/Widgets%20Layout/SelectDropdowns.dart';
 
 void main() {
   runApp(const MyApp());
@@ -64,51 +67,99 @@ class TheHomePage extends StatelessWidget {
           backgroundColor: Colors.greenAccent,
         ),
         body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        // Navigate to the second route using Navigator.push()
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const BasicLayoutLesson()));
-                  },
-                  child: const Text("Basic Layout")),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => AccessBankingApp()));
-                  },
-                  child: const Text("Practice - Access Bank Layout")),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const FormLayout()));
-                  },
-                  child: const Text("Building Form Layouts")),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ScaffoldProperties()));
-                  },
-                  child: const Text("More on ScaffoldProperties")),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => WidgetAndProperties()));
-                  },
-                  child: const Text("More on Widgets And Properties")),
-            ])));
+            child: SingleChildScrollView(
+          child: Column(
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Text(
+                  "Widget Practice",
+                  style: TextStyle(fontSize: 30),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          // Navigate to the second route using Navigator.push()
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BasicLayoutLesson()));
+                    },
+                    child: const Text("Basic Layout")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          // Navigate to the second route using Navigator.push()
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DatePicker()));
+                    },
+                    child: const Text("Date Picker")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          // Navigate to the second route using Navigator.push()
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Dropdowns()));
+                    },
+                    child: const Text(" Handling Dropdowns")),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  "APP LAYOUT PROJECTS ",
+                  style: TextStyle(fontSize: 30),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AccessBankingApp()));
+                    },
+                    child: const Text(" Access Bank Dashboard")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const FormLayout()));
+                    },
+                    child: const Text("Building Form Layouts")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DuolingoProfile()));
+                    },
+                    child: const Text("My Duolingo Profile")),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  "FlutterNinja Practice",
+                  style: TextStyle(fontSize: 30),
+                ),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const ScaffoldProperties()));
+                    },
+                    child: const Text("More on ScaffoldProperties")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const WidgetAndProperties()));
+                    },
+                    child: const Text("More on Widgets And Properties")),
+              ]),
+        )));
   }
 }
 
