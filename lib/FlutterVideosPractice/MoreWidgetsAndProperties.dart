@@ -38,7 +38,7 @@ class WidgetAndProperties extends StatelessWidget {
               label: Text("mail me"),
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color(0xB321F321), 
+                backgroundColor: Color(0xB321F321),
               ),
             ),
             Container(
@@ -52,7 +52,37 @@ class WidgetAndProperties extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(Icons.accessibility_new_outlined),
               ),
-            )
+            ),
+            Row(
+              children: [
+                Expanded(
+                    flex: 6,
+                    child: Image.asset("lib/Assets/Images/travel.jpg")),
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text("1"),
+                    color: Colors.red,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text("2"),
+                    color: Colors.green,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Text("3"),
+                    color: Colors.yellow,
+                  ),
+                ),
+              ],
+            ),
+            Text("dd")
           ],
         ),
       ),

@@ -77,11 +77,13 @@ flutter:
       fonts:
         - asset: lib\Assets\Fonts\Abril_Fatface\AbrilFatface-Regular.ttf
 
-    # - family: Schyler
-    #   fonts:
-    #     - asset: fonts/Schyler-Regular.ttf
-    #     - asset: fonts/Schyler-Italic.ttf
-    #       style: italic
+    - family: OpenSans
+      fonts:
+        - asset: lib\Assets\Fonts\Open_Sans\OpenSans-VariableFont_wdth,wght.ttf
+
+    - family: NunitoSans
+      fonts:
+        - asset: lib\Assets\Fonts\Nunito_Sans\NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf
 
   #
   # For details regarding fonts from package dependencies,
