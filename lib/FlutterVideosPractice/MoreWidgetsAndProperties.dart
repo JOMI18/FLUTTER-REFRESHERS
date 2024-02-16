@@ -7,7 +7,7 @@ class WidgetAndProperties extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buttons"),
+        title: const Text("Buttons"),
       ),
       body: Center(
         child: Column(
@@ -19,9 +19,9 @@ class WidgetAndProperties extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Color(0xB32195F3), // Background color
+                  backgroundColor: const Color(0xB32195F3), // Background color
                 ),
-                child: Text("Click me")),
+                child: const Text("Click me")),
             TextButton(
               onPressed: () {
                 // Add your onPressed callback here
@@ -30,19 +30,19 @@ class WidgetAndProperties extends StatelessWidget {
                 foregroundColor: Colors.black,
                 backgroundColor: Colors.red, // Text color
               ),
-              child: Text('Button Text'),
+              child: const Text('Button Text'),
             ),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.mail),
-              label: Text("mail me"),
+              icon: const Icon(Icons.mail),
+              label: const Text("mail me"),
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Color(0xB321F321),
+                backgroundColor: const Color(0xB321F321),
               ),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color.fromARGB(
                     255, 241, 191, 230), // Set the background color here
                 shape:
@@ -50,7 +50,7 @@ class WidgetAndProperties extends StatelessWidget {
               ),
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.accessibility_new_outlined),
+                icon: const Icon(Icons.accessibility_new_outlined),
               ),
             ),
             Row(
@@ -61,28 +61,35 @@ class WidgetAndProperties extends StatelessWidget {
                 Expanded(
                   flex: 3,
                   child: Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text("1"),
+                    padding: const EdgeInsets.all(20),
                     color: Colors.red,
+                    child: const Text("1"),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text("2"),
+                    padding: const EdgeInsets.all(20),
                     color: Colors.green,
+                    child: const Text("2"),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text("3"),
+                    padding: const EdgeInsets.all(20),
                     color: Colors.yellow,
+                    child: const Text("3"),
                   ),
                 ),
               ],
             ),
-            Text("dd")
+            const CircleAvatar(
+              backgroundImage: AssetImage("lib/Assets/Images/feran.jpg"),
+              radius: 80,
+            ),
+            const Divider(
+              height: 40, // space above and below it
+              color: Color.fromARGB(255, 0, 0, 0),
+            )
           ],
         ),
       ),

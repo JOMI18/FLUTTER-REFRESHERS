@@ -106,18 +106,25 @@ class ProfileImage extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            height: 165,
-            width: 300,
-            decoration: BoxDecoration(
-                image: const DecorationImage(
-                  image: NetworkImage(
-                      "https://avatars.githubusercontent.com/u/108834147?v=4"),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(width: 3, color: const Color(0xFF3A3A3A))),
+          CircleAvatar(
+            // foregroundImage: NetworkImage(
+            //     "https://avatars.githubusercontent.com/u/108834147?v=4"),
+            radius: 80,
+            backgroundImage: NetworkImage(
+                "https://avatars.githubusercontent.com/u/108834147?v=4"),
           )
+          // Container(
+          //   height: 165,
+          //   width: 300,
+          //   decoration: BoxDecoration(
+          //       image: const DecorationImage(
+          //         image: NetworkImage(
+          //             "https://avatars.githubusercontent.com/u/108834147?v=4"),
+          //         fit: BoxFit.cover,
+          //       ),
+          //       borderRadius: BorderRadius.circular(20),
+          //       border: Border.all(width: 3, color: const Color(0xFF3A3A3A))),
+          // )
         ],
       ),
     );

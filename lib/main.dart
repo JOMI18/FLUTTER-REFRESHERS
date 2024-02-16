@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:practiceapp/FlutterVideosPractice/MoreScaffoldProperties.dart';
 import 'package:practiceapp/FlutterVideosPractice/MoreWidgetsAndProperties.dart';
+import 'package:practiceapp/FlutterVideosPractice/HandlingDynamicData/StatefulWidget.dart';
+import 'package:practiceapp/FlutterVideosPractice/World%20Map/home.dart';
+import 'package:practiceapp/FlutterVideosPractice/World%20Map/loading.dart';
+import 'package:practiceapp/FlutterVideosPractice/World%20Map/location.dart';
 import 'package:practiceapp/PersonalPractice/Apps%20Layout/AccessBankHomeScreen.dart';
 import 'package:practiceapp/PersonalPractice/Widgets%20Layout/BasicLayoutLesson.dart';
 import 'package:practiceapp/PersonalPractice/Apps%20Layout/DuolingProfile.dart';
@@ -41,6 +45,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade300),
         useMaterial3: true,
       ),
+      routes: {
+        "mapHome": (context) => WorldMap(),
+        "location": (context) => Location(),
+        "loading": (context) => Loading(),
+      },
       home: const TheHomePage(
           title: 'Flutter Demo Home Page'), // expecting an argument
     );
@@ -158,6 +167,22 @@ class TheHomePage extends StatelessWidget {
                                   const WidgetAndProperties()));
                     },
                     child: const Text("More on Widgets And Properties")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DynamicData()));
+                    },
+                    child: const Text("Dynamic Data")),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const WorldMap()));
+                    },
+                    child: const Text("World Map")),
               ]),
         )));
   }

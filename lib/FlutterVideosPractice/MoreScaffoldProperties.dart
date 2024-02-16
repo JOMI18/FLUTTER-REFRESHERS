@@ -9,6 +9,7 @@ class ScaffoldProperties extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 64, 255, 249),
+        elevation: 0, // removes the shadow
         title: const Text(
           "Scaffold Properties",
           style: TextStyle(fontFamily: "AbrilFatFace"),
@@ -29,7 +30,7 @@ class ScaffoldProperties extends StatelessWidget {
             image: AssetImage("lib/Assets/Images/travel.jpg"),
             height: 340,
             width: 340,
-          ), 
+          ),
           // Image.asset("")
           // Image.network("")
         ],
