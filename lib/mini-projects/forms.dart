@@ -22,7 +22,8 @@ class FormLayout extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: 
+      Column(
         children: [
           const Column(
             children: [
@@ -296,6 +297,7 @@ class FormLayout extends StatelessWidget {
                             )
                           ],
                         )),
+                    
                       ],
                     ),
                     const SizedBox(

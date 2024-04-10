@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practiceapp/FlutterVideosPractice/HandlingDynamicData/quotes.dart';
+import 'package:practiceapp/flutter-ninja/handling-dynamic-data/quotes.dart';
 
 class DynamicData extends StatefulWidget {
   const DynamicData({super.key});
@@ -57,6 +57,7 @@ class _DynamicDataState extends State<DynamicData> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
+            // set state is important to trigger the rebuild of widgets
             counter++;
           });
         },
@@ -81,7 +82,6 @@ class _DynamicDataState extends State<DynamicData> {
             height: 50,
           ),
           Column(
-            
             // children: quotes.map((quote) => Text(quote)).toList(),
 
             // children: quotes
@@ -145,3 +145,12 @@ class CardTemplate extends StatelessWidget {
     );
   }
 }
+
+
+//  Stateful widget life cycles 
+
+// initstate() --- called once when the widget is created -- subscribe to streams or any object that could change our widget data
+
+// build() --- builds the widget tree ---a build is triggered every time set state is used
+
+// dispose --- when the widget or state is removed

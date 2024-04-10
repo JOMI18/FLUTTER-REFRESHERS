@@ -85,10 +85,15 @@ class BasicLayoutLesson extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
-            //Return to the first route using Navigator.pop()
+            Navigator.pushNamed(context, "datepicker");
           },
-          child: const Text("Return to the Landing Page"),
+          child: const Text("Date Picker"),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, "dropdowns");
+          },
+          child: const Text("Dropdowns"),
         )
       ]),
     );
