@@ -21,3 +21,6 @@ export 'package:practiceapp/mini-projects/access_dashboard.dart';
 export 'package:practiceapp/mini-projects/world-map/home.dart';
 export 'package:practiceapp/mini-projects/world-map/loading.dart';
 export 'package:practiceapp/mini-projects/world-map/location.dart';
+
+// Services
+export 'package:practiceapp/services/world_time.dart';

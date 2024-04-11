@@ -77,48 +77,7 @@ class _LandingPageState extends State<LandingPage> {
                       ),
                     ],
                   );
-                }
-
-                    //  [
-                    //   Column(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    //     children: [
-                    //       const Text(
-                    //         "Flutter Ninja",
-                    //         style:
-                    //             TextStyle(fontSize: 22, fontWeight: FontWeight.w800),
-                    //       ),
-                    //       SizedBox(
-                    //         height: 300,
-                    //         child: ListView.builder(
-                    //           itemCount: categories.length,
-                    //           itemBuilder: (context, index) {
-                    //             return Column(
-                    //               children: [
-                    //                 ElevatedButton(
-                    //                     onPressed: () {
-                    //                       Navigator.pushNamed(
-                    //                           context, categories[index]["route"]);
-                    //                     },
-                    //                     style: ElevatedButton.styleFrom(
-                    //                         fixedSize: const Size(350, 60),
-                    //                         shape: const RoundedRectangleBorder(),
-                    //                         foregroundColor: Colors.white,
-                    //                         backgroundColor: const Color.fromARGB(
-                    //                             255, 0, 148, 141)),
-                    //                     child: Text(categories[index]["title"])),
-                    //                 const SizedBox(
-                    //                   height: 12,
-                    //                 )
-                    //               ],
-                    //             );
-                    //           },
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ],
-                    ).toList(),
+                }).toList(),
               ),
             )));
   }
